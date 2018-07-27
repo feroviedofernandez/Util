@@ -17,7 +17,7 @@ static void RelocateImages()
                     return;
                 }
 
-                //Creamos los libros. El OK y el KO (que será el que se envíe a Pana)
+                //Creamos los libros. El OK y el KO (que será el que se envíe)
                 Excel.Workbook workbookOK = xlApp.Workbooks.Add(Missing.Value);
                 Console.WriteLine("Libro OK creado");
 
