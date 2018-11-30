@@ -10,14 +10,15 @@ export default class Countdown extends React.Component {
 		this.getBetweenDates = this.getBetweenDates.bind(this);
 	}
 	
-	
 	componentDidMount(){
 		this._unmount = false;
 		this._getTimeoutDates();
 	}
+	
 	_getTimeoutDates(){
 		setInterval(this.getBetweenDates, 1000);
 	}
+	
 	getBetweenDates(){
 		if(!this._unmount){
 			var now  = "13/12/2018 00:00:00";
@@ -30,7 +31,6 @@ export default class Countdown extends React.Component {
 			this.setState({diffDays: d._data})
 		}
 	}
-
 
 	componentWillMount(){
 		this._unmount = true;
